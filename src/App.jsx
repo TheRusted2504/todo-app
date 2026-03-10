@@ -5,6 +5,7 @@ import ErrorPage from './pages/ErrorPage'
 import AddTodo from './pages/AddTodo'
 import useLocalStorage from 'use-local-storage'
 import { TodoContext } from './contexts/TodoContext'
+import EditTodo from './pages/EditTodo'
 
 import Home from './pages/Home'
 import './App.css'
@@ -36,6 +37,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path='add' element={<AddTodo />} />
             <Route path='*' element={<ErrorPage />} />
+            <Route path="todo/:id" element={<EditTodo />} />
           </Route>
         </Routes>
       </BrowserRouter>
